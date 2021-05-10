@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            position: relative;
+            width: 400px;
+            height: 400px;
+          
+            top:80px;
+            left: 400px;
+        }
+        img{
+            width: 100%;
+            height: 400px;
+            display: block;
+            border-radius: 50%;
+            box-shadow: -1px 5px 15px 10px #000;
+        }
+        .overlay{
+            width: 100%;
+            height: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            transition: 3s ease;
+            background-color: rgba(0, 0, 0,0.7);
+        }
+        .container:hover>.overlay{
+            height: 100%;
+            border-radius: 50%;
+            display: block;
+            transform: rotate(360deg);
+        }
+        .text{
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+            transform: translate(120px,200px);
+            background-color: yellow;
+            width: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://pngimg.com/uploads/shiva/shiva_PNG42.png" alt="">
+        <div class="overlay">
+            <div class="text">Jai shiva =></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main_div{
+            width: 100vw;
+            height: 100vh;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            position: relative;
+            background: chartreuse;
+        }
+        .box{
+         width: 400px;
+         position: absolute;
+         left: 50%;
+         top:50%;
+         transform: translate(-50%,-50%);
+         padding: 50px;
+         background-color: rgba(0,0, 0,1);
+         border-radius: 8px;
+        }
+        .box h1{
+            margin-bottom: 30px;
+            color: #fff;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        .box .inputBox{
+            position: relative;
+        }
+        .inputBox input{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #fff;
+            border: none;
+            outline: none;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+        }
+        .inputBox input:focus ~ label,
+        .inputBox input:valid ~ label{
+         top: -20px;
+         left: 0;
+         color: #03a9f4;
+         font-size: 12px;
+        }
+        .inputBox label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            transition: 0.5s ease;
+            color: #fff;
+        }
+        .box input[type="submit"]{
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #03a9f4;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_div">
+        <div class="box">
+            <h1>Login Form</h1>
+            <form action="">
+            <div class="inputBox">
+                <input type="text" required>
+                <label for="">Username</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

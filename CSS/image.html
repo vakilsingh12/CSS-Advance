@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            /* background-color: blueviolet; */
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+        img{
+            width:40vw;
+            height: 50vh;
+            background-size: 100% 100%;
+            border-radius: 10px;
+            
+            /* border:20px solid #000; */
+            /* transform: rotate(-30deg); */
+
+        }
+        .sub{
+            width:40vw;
+            height: 50vh;
+            background-size: 100% 100%;
+            border-radius: 10px;
+            position: absolute;
+            border:20px solid red;
+            transform: rotate(-30deg);
+            z-index: -1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub"></div>
+        <img src="https://www.rd.com/wp-content/uploads/2019/05/American-shorthair-cat-scaled.jpg" alt="">
+    </div>
+</body>
+</html>
