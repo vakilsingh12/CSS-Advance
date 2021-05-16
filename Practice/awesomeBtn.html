@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a{
+            text-decoration: none;
+            font-size: 5rem;
+            padding: 25px 75px;
+            border: 1px solid #000;
+            position: relative;
+            overflow: hidden;
+           
+        }
+        a::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:greenyellow;
+            transform: translateX(-100%);
+            transition: all 2s ease;
+            z-index: -1;
+            
+        }
+        a:hover::before{
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <a href="">Hello Vakil</a>
+    </div>
+</body>
+</html>

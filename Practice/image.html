@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            top: 50px;
+            left: 200px;
+        }
+        img{
+            width: 100%;
+            display: block;
+            height: 500px;
+        }
+        .overlay{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: 2s ease;
+           
+        }
+        .main:hover>.overlay{
+            height: 100%;
+            display: block;
+            background-color: rgb(161, 89, 89);
+            transform: rotate(360deg);
+        }
+        .main h1{
+            font-size: 5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://icon2.cleanpng.com/20180329/fdw/kisspng-shiva-krishna-deity-hinduism-god-shiva-5abd13061d2926.9549422115223406141195.jpg" alt="">
+        <div class="overlay">
+            <h1>Hello</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: chartreuse;
+        }
+        .main h1{
+            font-size: 10rem;
+            text-transform: uppercase;
+            text-shadow: 1px 5px 10px black;
+            position: relative;
+            
+        }
+        .main h1::before{
+            content: "VakilSingh";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            color: cornflowerblue;
+            overflow: hidden;
+            transition: all 1s ease-in-out;
+        }
+        .main h1:hover::before{
+            width: 100%;
+            text-shadow: 5px 5px 2px transparent;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>VakilSingh</h1>
+    </div>
+</body>
+</html>
