@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container a{
+            width: 350px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        a img{
+            width: 100%;
+            height: 100%;
+            transition: all 0.4s linear;
+        }
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-1500%,-50%);
+            color: #fff;
+            z-index: 11;
+            transition-timing-function: linear;
+            
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            z-index: 10;
+            transform: translate(-150%,-50%);
+            background-color: gold;
+            transition: 0.9s;
+            border-radius: 50%;
+        }
+        a:hover::after{
+            transform: translate(-50%,-50%);
+        }
+        a:hover>i{
+            transform: translate(-50%,-50%);
+        }
+        a:hover>img{
+            transform: scale(1.1);
+        }
+        @media(max-width:768px){
+            .container{
+                flex-direction: column;
+            }
+            .container a{
+                width: 250px;
+                height: 200px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <a href="">
+          <img src="https://cdn.wallpapersafari.com/53/48/4seKuD.jpg" alt="">
+          <i class="fa fa-3x fa-search"></i>
+      </a>
+      <a href="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Taj_Mahal_in_India_-_Kristian_Bertel.jpg/1200px-Taj_Mahal_in_India_-_Kristian_Bertel.jpg" alt="">
+        <i class="fa fa-3x fa-search"></i>
+    </a>
+    <a href="">
+        <img src="https://images.indianexpress.com/2019/11/qutub-minar.jpg" alt="">
+        <i class="fa fa-3x fa-search"></i>
+    </a>
+  </div>
+</body>
+</html>

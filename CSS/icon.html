@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        div{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+
+        }
+        ul li{
+            width: 200px;
+            height: 200px;
+            /* background-color: rgba(6, 82, 221,1.0); */
+            margin: 10px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(6, 82, 221,1.0);
+            position: relative;
+            overflow: hidden;
+        }
+        i{
+         color: rgba(6, 82, 221,1.0);
+        }
+        ul li::before{
+            position: absolute;
+            content: "";
+            width: inherit;
+            height: inherit;
+            background-color: rgba(6, 82, 221,1.0);
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            z-index: -1;
+        }
+        ul li:hover::before{
+            transform: scale(0.8);
+            opacity: 1;
+         
+        }
+        ul li:hover i{
+            color: #fff;
+        }
+        ul li::after{
+            position: absolute;
+            content: "";
+            width: inherit;
+            height: inherit;
+            border: 2px dashed  rgba(6, 82, 221,1.0) ;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 1s linear;
+            
+        }
+        ul li:hover::after{
+            opacity: 1;
+            animation: hello 14s infinite;
+        }
+        @keyframes hello {
+            0%{
+                transform: scale(0.9) rotate(0deg);
+            }
+            100%{
+                transform:scale(0.9) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li> <i class="fas fa-3x fa-heart"></i></li>
+            <li> <i class="fas fa-3x fa-globe"></i></li>
+            <li> <i class="fas fa-3x fa-gift"></i></li>
+            <li> <i class="fas fa-3x fa-star"></i></li>
+        </ul>
+    </div>
+</body>
+</html>

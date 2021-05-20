@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+        }
+        ul li{
+            width: 50px;
+            height: 50px;
+            /* background-color: blue; */
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid blue;
+            position: relative;
+            overflow: hidden;
+        }
+        ul li::before{
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        background-color: blue;
+        border-radius: 50%;
+        opacity: 0;
+        z-index: -1;
+        transition: all 1s ease;
+        }
+        ul li:hover::before{
+            opacity: 1;
+            transform: scale(0.6);
+        }
+        ul li:hover i{
+            color: #fff;
+        }
+        ul li::after{
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        opacity: 0;
+        border: 3px dashed blue;
+        transition: all 1s ease;
+        }
+        ul li:hover::after{
+            opacity: 1;
+            transform: scale(0.9);
+            animation: root 15s 1;
+        }
+        @keyframes root {
+            0%{transform: rotate(0deg) scale(0.8);}
+            100%{transform: rotate(360deg) scale(0.8);}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <i class="fas  fa-globe"></i>
+            </li>
+            <li>
+                <i class="fas  fa-gift"></i>
+            </li>
+            <li>
+                <i class="fas  fa-heart"></i>
+            </li>
+            <li>
+                <i class="fas  fa-star"></i>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

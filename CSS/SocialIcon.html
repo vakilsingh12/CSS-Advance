@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            height: 100px;
+            width: 100px;
+            background-color: #f1f2f6;
+            margin: 10px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 1px 4px 2px 2px #d1ccc0;
+            line-height: 110px;
+            position: relative;
+            overflow: hidden;
+        }
+        .fa-twitter{
+            color: #1e90ff;
+        }
+        .fa-linkedin{
+        color: #3742fa;
+        }
+        .fa-instagram{
+            color: #D980FA;
+        }
+        .fa-youtube{
+            color: #EA2027;
+        }
+        a .fa{
+        transition: all 0.3s linear;
+        }
+        a:hover .fa{
+        transform: scale(1.5);
+        }
+        a::before{
+            content: "";
+            width: 120%;
+            height: 120%;
+            position: absolute;
+            top: 90%;
+            left: -50%;
+            background-color: rgba(153, 128, 250,1.0);
+            transform: rotate(60deg);
+           
+        }
+        a:hover::before{
+            animation: root 1.2s 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes root {
+            0%{
+                top: 90%;
+                left: -50%;
+            }
+            50%{
+                top: -60%;
+                left: -10%;
+            }
+            100%{
+                top: -10%;
+                left: -10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <a href="">
+           <i class="fa fa-2x fa-facebook"></i>
+       </a>
+       <a href="">
+           <i class="fa fa-2x fa-twitter"></i>
+       </a>
+       <a href="">
+           <i class="fa fa-2x fa-linkedin"></i>
+       </a>
+       <a href="">
+           <i class="fa fa-2x fa-instagram"></i>
+       </a>
+       <a href="">
+           <i class="fa fa-2x fa-youtube"></i>
+       </a>
+    
+    </div>
+</body>
+</html>

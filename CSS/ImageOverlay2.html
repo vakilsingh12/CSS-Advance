@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --wth:60vw;
+            --hth:60vh;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: rgba(127, 143, 166,1.0);
+        }
+        .child{
+            width: var(--wth);
+            height: var(--hth);
+            overflow: hidden;
+            box-shadow: 5px;
+            background-image:linear-gradient(120deg,rgba(255,255,255,0.5) 50%,
+            rgba(0,0,0,0.9) 50%
+            ), url('https://eskipaper.com/images/green-abstract-wallpaper-9.jpg');
+            background-size: 100% 100%;
+            box-shadow: 0px 10px 20px -6px #000;
+            border-radius: 5px 8px;
+            transition: all 1s linear;
+        }
+        form{
+             float: right;
+             width:calc(var(--wth)/2);
+             height: var(--hth);
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             flex-direction: column;             
+        }
+        form div{
+             width: 70%;
+        }
+        .inputBox input{
+            width: 100%;
+            padding: 6px 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            
+        }
+        .inputBox label{
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #fff;
+        }
+        .inputBtn button{
+            padding: 6px 20px;
+            border-radius: 2px;
+            background-color: greenyellow;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 900;
+        }
+        .child:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="child">
+            <form action="">
+                <h1 style="color: #fff;border-bottom: 3px solid #fff;">LogIn Form</h1><br>
+                <div class="inputBox">
+                    <label for="">Name</label>
+                    <input type="text">
+                </div><br>
+                <div class="inputBox">
+                    <label for="">Email</label>
+                    <input type="email">
+                </div><br>
+                <div class="inputBox">
+                    <label for="">Password</label>
+                    <input type="password">
+                </div><br>
+                <div class="inputBtn">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
