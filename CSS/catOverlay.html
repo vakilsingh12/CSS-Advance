@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        .center>*,.blend>*{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+        }
+        .border{
+            border: 15px solid chartreuse;
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px chartreuse,inset 0 0 20px chartreuse;
+        }
+        .grid{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+        .data-white{
+            background-color: white;
+        }
+        .blend{
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+         <img src="https://i.pinimg.com/736x/00/bf/83/00bf831584825b8e30792213dc3b3774.jpg" alt="">
+         <div class="border"></div>
+         <div class="grid">
+             <div class="data-white"></div>
+             <div></div>
+             <div></div>
+             <div class="data-white"></div>
+         </div>
+        <div class="blend">
+            <img src="https://i.pinimg.com/736x/00/bf/83/00bf831584825b8e30792213dc3b3774.jpg" alt="">
+            <div class="grid">
+                <div></div>
+                <div class="data-white"></div>
+                <div class="data-white"></div>
+                <div></div>
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>

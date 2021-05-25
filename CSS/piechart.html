@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie-Chart</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .child{
+            width: 60vw;
+            height: 70vh;
+            box-shadow: 0 0 10px #000;
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        /* .child>*{
+            position: absolute;
+        } */
+        .child h2{
+            position: absolute;
+            padding: 20px 0 20px 20px;
+            text-transform: uppercase;
+            color: darkblue;
+            z-index: 1;
+        }
+        .child p{
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            text-align: right;
+            font-size: 1.2rem;
+            color: darkblue;
+        }
+        .child h3{
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            color: darkblue;
+            text-transform: capitalize;
+            font-style: italic;
+        }
+        span::after{
+            content: "";
+            width: 0.8rem;
+            height: 0.8rem;
+            display: inline-block;
+            font-weight: 900;
+            border-radius: 50%;
+            background-color: currentColor;
+            margin: 0 0.5rem;
+        }
+        .child h3{
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+        }
+        .pie-chart{
+            background:radial-gradient(circle closest-side,transparent 100%,#fff 0),
+            conic-gradient(from 180deg,
+            #ee5253 0,
+            #ee5253 35%,
+            #3c58d3 0,
+            #3c58d3 60%,
+            chartreuse 0,
+            chartreuse 75%,
+            green 0,
+            green 89%,
+            gold 0,
+            gold 100%); 
+            margin-top: 70px;
+            min-width:180px;
+            min-height: 300px;
+            animation: root 11s linear infinite;
+        }
+        @keyframes root {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        /* @media (max-width:900) {
+            .child{
+                max-height: ;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+        <h2>Top 5 states with highest corona cases </h2>
+            <div class="pie-chart"></div>
+            <p>
+                Rajasthan 43200 <span style="color:#ee5253"></span><br>
+                Haryana 18900 <span style="color: blue;"></span><br>
+                Punjab 12000 <span style="color: chartreuse;"></span><br>
+                Delhi 56440 <span style="color: green;"></span><br>
+                Goa 17500 <span style="color: gold;"></span>
+            </p>
+            <h3>India corona virus cases till now</h3>
+        </div>
+    </div>
+</body>
+</html>

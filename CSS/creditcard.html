@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eccc68;
+        }
+        .child{
+            width: 400px;
+            height: 230px;
+            border-radius: 15px;
+            background: linear-gradient(to right top,#52b6fe,#6154fe);
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 0 10px #6154fe;
+        }
+        .top_div{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            align-items: center;
+            /* background: chartreuse; */
+        }
+        .top_div h2{
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+        .top_div h1{
+            font-size: 30px;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        .bottom_div{
+            position: absolute;
+            bottom: 20px;
+            /* color: #fff; */
+        }
+        .bottom_div h2{
+            font-size: 20px;
+            text-transform: capitalize;
+            font-weight: 400;
+            color: #dfe6e9;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+        .bottom_div p{
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        .child::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 100%, 79% 64%, 46% 46%, 36% 16%, 0 0);
+            background: linear-gradient(to right top,blue,#0097e6);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+           border-radius: 16px;
+           opacity: 0.4;
+        }
+        .child::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 100%, 79% 64%, 46% 46%, 36% 16%, 0 0);
+            background-image: url('https://www.wallpapertip.com/wmimgs/12-124058_grey-star-wallpaper.png');
+            background-size: cover;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+           border-radius: 16px;
+           opacity:0.4;
+        }
+        .top_div>*{
+            z-index: 2;
+        }
+        .bottom_div{
+            z-index:2;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <div class="top_div">
+                <h2>Credit</h2>
+                <h1>Visa</h1>
+            </div>
+            <div class="bottom_div">
+                <h2>Vakil Singh</h2>
+                <p>1290-4523-3472-3279</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

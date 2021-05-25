@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .outer{
+            width: 100vw;
+            height: 100vh;
+            background-color: #bdc3c7;
+        }
+        .inner{
+            width: 80vw;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            transition: all 0.2s linear;
+        }
+        .child{
+            height: 200px;
+            background-color: rgb(0, 22, 219);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: blue;
+            flex: 1 1 200px;
+           margin: 20px;
+        }
+        .child:first-child{
+            background-color: #f1c40f;
+        }
+        .child:last-child{
+            background-color: #e74c3c;
+        }
+        h1{
+            padding: 40px 0;
+            text-align: center;
+            color: #fff;
+            font-size: 3rem;
+            background-color: #000;
+        }
+        p{
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            color:#fff;
+            font-weight: 900;
+            
+        }
+        @media(max-width:900px){
+            .outer{
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>Service</h1><br><br><br>
+        <div class="inner">
+            <div class="child">
+                <p>Vakil Singh</p>
+            </div>
+            <div class="child">
+                <p>Vakil Singh</p>
+            </div>
+            <div class="child">
+                <p>Vakil Singh</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
