@@ -5,17 +5,55 @@
           box-sizing: border-box;
 }
 
-.main {
-  width: 100vw;
-  height: 100vh;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+html {
+  font-size: 62.5%;
 }
 
-h1 {
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #12CDC0;
+}
+
+.main h1 {
   color: red;
   font-size: 5rem;
   text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+}
+
+.main h1:hover {
+  color: #C4E538;
+}
+
+.main h1::after {
+  content: " Hello";
+}
+
+.main p {
+  color: red;
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: #000;
+}
+
+.main p:hover {
+  color: #C4E538;
 }
 /*# sourceMappingURL=main.css.map */
